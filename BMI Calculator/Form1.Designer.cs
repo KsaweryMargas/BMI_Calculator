@@ -32,6 +32,8 @@ namespace BMI_Calculator
         /// </summary>
         private void InitializeComponent()
         {
+            men = new CheckBox();
+            women = new CheckBox();
             oblicz = new Button();
             w = new Label();
             label2 = new Label();
@@ -46,6 +48,26 @@ namespace BMI_Calculator
             age = new Label();
             wpiszwiek = new TextBox();
             SuspendLayout();
+            // 
+            // men
+            // 
+            men.AutoSize = true;
+            men.Location = new Point(27, 188);
+            men.Name = "men";
+            men.Size = new Size(50, 19);
+            men.TabIndex = 0;
+            men.Text = "Men";
+            men.UseVisualStyleBackColor = true;
+            // 
+            // women
+            // 
+            women.AutoSize = true;
+            women.Location = new Point(94, 188);
+            women.Name = "women";
+            women.Size = new Size(68, 19);
+            women.TabIndex = 1;
+            women.Text = "Women";
+            women.UseVisualStyleBackColor = true;
             // 
             // oblicz
             // 
@@ -188,6 +210,8 @@ namespace BMI_Calculator
             Controls.Add(label2);
             Controls.Add(w);
             Controls.Add(oblicz);
+            Controls.Add(women);
+            Controls.Add(men);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -196,6 +220,8 @@ namespace BMI_Calculator
 
         #endregion
 
+        private CheckBox men;
+        private CheckBox women;
         private Button oblicz;
         private Label w;
         private Label label2;

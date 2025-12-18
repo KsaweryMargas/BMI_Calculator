@@ -33,6 +33,12 @@ namespace BMI_Calculator
                 return;
             }
 
+            if (!men.Checked && !women.Checked)
+            {
+                MessageBox.Show("Wybierz płeć!");
+                return;
+            }
+
             double bmi = weight / Math.Pow(height / 100.0, 2);
             bmi = Math.Round(bmi, 2);
             wynikBMI.Text = bmi.ToString();
@@ -95,6 +101,11 @@ namespace BMI_Calculator
                        "Zalecane jest leczenie pod kontrolą lekarza. Ważne jest, aby uzyskać wsparcie medyczne i psychologiczne. " +
                        "Małe kroki w diecie i ruchu mogą dać duże efekty. Nie poddawaj się, Twoje zdrowie jest najważniejsze.";
             }
+
+            if (men.Checked)
+                kategoria += " (mężczyzna)";
+            else
+                kategoria += " (kobieta)";
 
             wynikKategoria.Text = kategoria;
             opisKategorii.Text = opis;
