@@ -21,6 +21,8 @@ namespace BMI_Calculator
             tabelaBMI.Rows.Add("30 – 34.9", "Otyłość I stopnia");
             tabelaBMI.Rows.Add("35 – 39.9", "Otyłość II stopnia");
             tabelaBMI.Rows.Add("≥ 40", "Michal Jaśkiewicz");
+            men.CheckedChanged += (s, e) => { if (men.Checked) women.Checked = false; };
+            women.CheckedChanged += (s, e) => { if (women.Checked) men.Checked = false; };
         }
 
         private void oblicz_Click(object sender, EventArgs e)
