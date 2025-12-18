@@ -10,6 +10,17 @@ namespace BMI_Calculator
         public Form1()
         {
             InitializeComponent();
+            tabelaBMI.ColumnCount = 2;
+            tabelaBMI.Columns[0].Name = "BMI";
+            tabelaBMI.Columns[1].Name = "Kategoria";
+            tabelaBMI.Rows.Add("< 14", "Szczurek");
+            tabelaBMI.Rows.Add("14 – 16.9", "Wychudzenie");
+            tabelaBMI.Rows.Add("17 – 19.9", "Niedowaga");
+            tabelaBMI.Rows.Add("20 – 24.9", "Pożądana masa ciała");
+            tabelaBMI.Rows.Add("25 – 29.9", "Nadwaga");
+            tabelaBMI.Rows.Add("30 – 34.9", "Otyłość I stopnia");
+            tabelaBMI.Rows.Add("35 – 39.9", "Otyłość II stopnia");
+            tabelaBMI.Rows.Add("≥ 40", "Michal Jaśkiewicz");
         }
 
         private void oblicz_Click(object sender, EventArgs e)
