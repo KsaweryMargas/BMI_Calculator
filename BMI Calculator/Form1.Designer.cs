@@ -41,6 +41,7 @@ namespace BMI_Calculator
             wpiszheight = new TextBox();
             height = new Label();
             weight = new Label();
+            opisKategorii = new Label();
             age = new Label();
             wpiszwiek = new TextBox();
             SuspendLayout();
@@ -129,6 +130,15 @@ namespace BMI_Calculator
             weight.TabIndex = 10;
             weight.Text = "Waga w kg:";
             // 
+            // opisKategorii
+            // 
+            opisKategorii.AutoSize = true;
+            opisKategorii.Location = new Point(27, 375);
+            opisKategorii.Name = "opisKategorii";
+            opisKategorii.Size = new Size(22, 15);
+            opisKategorii.TabIndex = 11;
+            opisKategorii.Text = "---";
+            // 
             // age
             // 
             age.AutoSize = true;
@@ -153,6 +163,7 @@ namespace BMI_Calculator
             ClientSize = new Size(510, 453);
             Controls.Add(wpiszwiek);
             Controls.Add(age);
+            Controls.Add(opisKategorii);
             Controls.Add(weight);
             Controls.Add(height);
             Controls.Add(wpiszheight);
@@ -179,6 +190,7 @@ namespace BMI_Calculator
         private TextBox wpiszheight;
         private Label height;
         private Label weight;
+        private Label opisKategorii;
         private Label age;
         private TextBox wpiszwiek;
     }
