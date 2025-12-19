@@ -1,0 +1,3 @@
+- Aplikacja Desktopowa (WPF / Windows Forms):
+---
+   - Pomysł: Kalkulator BMI.
