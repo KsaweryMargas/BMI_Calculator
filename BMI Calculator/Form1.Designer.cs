@@ -48,6 +48,7 @@ namespace BMI_Calculator
             tabelaBMI = new DataGridView();
             age = new Label();
             wpiszwiek = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)tabelaBMI).BeginInit();
             SuspendLayout();
             // 
             // men
@@ -123,18 +124,18 @@ namespace BMI_Calculator
             wpiszweight.BackColor = SystemColors.ControlLightLight;
             wpiszweight.Location = new Point(27, 150);
             wpiszweight.Name = "wpiszweight";
+            wpiszweight.PlaceholderText = "kg";
             wpiszweight.Size = new Size(135, 23);
             wpiszweight.TabIndex = 7;
-            wpiszweight.Text = "kg";
             // 
             // wpiszheight
             // 
             wpiszheight.BackColor = SystemColors.ControlLightLight;
             wpiszheight.Location = new Point(27, 95);
             wpiszheight.Name = "wpiszheight";
+            wpiszheight.PlaceholderText = "cm";
             wpiszheight.Size = new Size(135, 23);
             wpiszheight.TabIndex = 8;
-            wpiszheight.Text = "cm";
             // 
             // height
             // 
@@ -157,7 +158,8 @@ namespace BMI_Calculator
             // opisKategorii
             // 
             opisKategorii.AutoSize = true;
-            opisKategorii.Location = new Point(27, 375);
+            opisKategorii.Location = new Point(26, 369);
+            opisKategorii.MaximumSize = new Size(450, 0);
             opisKategorii.Name = "opisKategorii";
             opisKategorii.Size = new Size(22, 15);
             opisKategorii.TabIndex = 11;
@@ -200,9 +202,9 @@ namespace BMI_Calculator
             // 
             wpiszwiek.Location = new Point(27, 37);
             wpiszwiek.Name = "wpiszwiek";
+            wpiszwiek.PlaceholderText = "wiek";
             wpiszwiek.Size = new Size(135, 23);
             wpiszwiek.TabIndex = 15;
-            wpiszwiek.Text = "wiek";
             // 
             // Form1
             // 
@@ -227,6 +229,7 @@ namespace BMI_Calculator
             Controls.Add(men);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)tabelaBMI).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

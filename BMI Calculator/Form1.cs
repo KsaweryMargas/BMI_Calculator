@@ -51,6 +51,7 @@ namespace BMI_Calculator
             if (bmi < 14)
             {
                 kategoria = "Szczurek";
+                wynikKategoria.ForeColor = Color.DarkBlue;
                 opis = "Twoja masa ciała jest bardzo niska, Może to prowadzić do poważnych problemów zdrowotnych," +
                        "Zalecana jest pilna konsultacja z lekarzem. Twój organizm potrzebuje więcej energii," +
                        "aby prawidłowo funkcjonować. Staraj się jeść regularnie i odżywczo. Pamiętaj też o odpoczynku i unikaniu stresu.";
@@ -58,6 +59,7 @@ namespace BMI_Calculator
             else if (bmi < 17)
             {
                 kategoria = "Wychudzenie";
+                wynikKategoria.ForeColor = Color.Blue;
                 opis = "Twoja masa ciała jest znacznie poniżej normy, Może to powodować osłabienie organizmu," +
                        "Warto skonsultować się z dietetykiem. Spróbuj wprowadzić zdrowe przekąski między posiłkami." +
                        "Pij dużo wody i unikaj słodkich napojów. Zadbaj o lekką aktywność, jak spacer lub stretching.";
@@ -65,6 +67,7 @@ namespace BMI_Calculator
             else if (bmi < 20)
             {
                 kategoria = "Niedowaga";
+                wynikKategoria.ForeColor = Color.DeepSkyBlue;
                 opis = "Twoja masa ciała jest poniżej zalecanej normy, Może to wpływać na odporność i energię, " +
                       "Zaleca się zwiększenie wartości odżywczej posiłków. Dodaj więcej białka i warzyw do diety." +
                       "Jedz regularnie, nie pomijaj śniadań. Staraj się wysypiać i dbać o równowagę w życiu.";
@@ -72,6 +75,7 @@ namespace BMI_Calculator
             else if (bmi < 25)
             {
                 kategoria = "Pożądana masa ciała";
+                wynikKategoria.ForeColor = Color.Green;
                 opis = "Twoja masa ciała mieści się w normie, Oznacza to prawidłowe proporcje wagi do wzrostu, " +
                        "Utrzymuj zdrową dietę i aktywność fizyczną. Kontynuuj dbanie o regularne posiłki." +
                        "Pamiętaj o ruchu każdego dnia. Ciesz się dobrym samopoczuciem i zdrowiem.";
@@ -79,6 +83,7 @@ namespace BMI_Calculator
             else if (bmi < 30)
             {
                 kategoria = "Nadwaga";
+                wynikKategoria.ForeColor = Color.DarkOrange;
                 opis = "Twoja masa ciała jest powyżej normy, Może to zwiększać ryzyko chorób," +
                        "Zalecana jest większa aktywność fizyczna. Staraj się chodzić na spacery lub ćwiczyć 2-3 razy w tygodniu." +
                        "Ogranicz słodycze i tłuste jedzenie. Dbaj o regularne posiłki i nawodnienie.";
@@ -86,6 +91,7 @@ namespace BMI_Calculator
             else if (bmi < 35)
             {
                 kategoria = "Otyłość I stopnia";
+                wynikKategoria.ForeColor = Color.OrangeRed;
                 opis = "Występuje otyłość pierwszego stopnia, Może negatywnie wpływać na zdrowie," +
                        "Warto skonsultować się ze specjalistą. Spróbuj wprowadzić więcej warzyw i owoców do codziennej diety. " +
                        "Unikaj podjadania między posiłkami. Pamiętaj o regularnej aktywności fizycznej, nawet lekkiej.";
@@ -93,12 +99,14 @@ namespace BMI_Calculator
             else if (bmi < 40)
             {
                 kategoria = "Otyłość II stopnia";
+                wynikKategoria.ForeColor = Color.Red;
                 opis = "Jest to zaawansowana otyłość, Zwiększa ryzyko chorób przewlekłych, Konieczna jest zmiana stylu życia." +
                        "Staraj się planować posiłki z pomocą dietetyka. Znajdź formę ruchu, którą polubisz. Dbaj o swoje zdrowie krok po kroku, bez pośpiechu.";
             }
             else
             {
                 kategoria = "Michal Jaśkiewicz";
+                wynikKategoria.ForeColor = Color.DarkRed;
                 opis = "Jest to skrajna otyłość, stanowi poważne zagrożenie dla zdrowia, " +
                        "Zalecane jest leczenie pod kontrolą lekarza. Ważne jest, aby uzyskać wsparcie medyczne i psychologiczne. " +
                        "Małe kroki w diecie i ruchu mogą dać duże efekty. Nie poddawaj się, Twoje zdrowie jest najważniejsze.";
