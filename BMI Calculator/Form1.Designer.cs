@@ -44,6 +44,7 @@ namespace BMI_Calculator
             height = new Label();
             weight = new Label();
             opisKategorii = new Label();
+            clear = new Button();
             tabelaBMI = new DataGridView();
             age = new Label();
             wpiszwiek = new TextBox();
@@ -162,6 +163,17 @@ namespace BMI_Calculator
             opisKategorii.TabIndex = 11;
             opisKategorii.Text = "---";
             // 
+            // clear
+            // 
+            clear.BackColor = SystemColors.AppWorkspace;
+            clear.Location = new Point(102, 213);
+            clear.Name = "clear";
+            clear.Size = new Size(60, 40);
+            clear.TabIndex = 12;
+            clear.Text = "Clear";
+            clear.UseVisualStyleBackColor = false;
+            clear.Click += clear_Click;
+            // 
             // tabelaBMI
             // 
             tabelaBMI.AllowUserToAddRows = false;
@@ -200,6 +212,7 @@ namespace BMI_Calculator
             Controls.Add(wpiszwiek);
             Controls.Add(age);
             Controls.Add(tabelaBMI);
+            Controls.Add(clear);
             Controls.Add(opisKategorii);
             Controls.Add(weight);
             Controls.Add(height);
@@ -232,6 +245,7 @@ namespace BMI_Calculator
         private Label height;
         private Label weight;
         private Label opisKategorii;
+        private Button clear;
         private DataGridView tabelaBMI;
         private Label age;
         private TextBox wpiszwiek;

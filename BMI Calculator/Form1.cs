@@ -112,5 +112,16 @@ namespace BMI_Calculator
             wynikKategoria.Text = kategoria;
             opisKategorii.Text = opis;
         }
+        private void clear_Click(object sender, EventArgs e)
+        {
+            wpiszwiek.Clear();
+            wpiszheight.Clear();
+            wpiszweight.Clear();
+            wynikBMI.Text = "";
+            wynikKategoria.Text = "";
+            opisKategorii.Text = "";
+            men.Checked = false;
+            women.Checked = false;
+        }
     }
 }
