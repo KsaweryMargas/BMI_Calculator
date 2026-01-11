@@ -10,9 +10,11 @@ namespace BMI_Calculator
         public Form1()
         {
             InitializeComponent();
+            // Konfiguracja kolumn tabeli wyników
             tabelaBMI.ColumnCount = 2;
             tabelaBMI.Columns[0].Name = "BMI";
             tabelaBMI.Columns[1].Name = "Kategoria";
+            // Dodawanie norm BMI do tabeli
             tabelaBMI.Rows.Add("< 14", "Szczurek");
             tabelaBMI.Rows.Add("14 – 16.9", "Wychudzenie");
             tabelaBMI.Rows.Add("17 – 19.9", "Niedowaga");
@@ -21,12 +23,14 @@ namespace BMI_Calculator
             tabelaBMI.Rows.Add("30 – 34.9", "Otyłość I stopnia");
             tabelaBMI.Rows.Add("35 – 39.9", "Otyłość II stopnia");
             tabelaBMI.Rows.Add("≥ 40", "Michal Jaśkiewicz");
+            // Logika wyboru jednej płci
             men.CheckedChanged += (s, e) => { if (men.Checked) women.Checked = false; };
             women.CheckedChanged += (s, e) => { if (women.Checked) men.Checked = false; };
         }
 
         private void oblicz_Click(object sender, EventArgs e)
         {
+            // Walidacja poprawności wprowadzonych danych
             if (!double.TryParse(wpiszheight.Text, out double height) ||
                 !double.TryParse(wpiszweight.Text, out double weight) ||
                 !double.TryParse(wpiszwiek.Text, out double wiek))
@@ -35,12 +39,14 @@ namespace BMI_Calculator
                 return;
             }
 
+            // Sprawdzenie czy wybrano płeć
             if (!men.Checked && !women.Checked)
             {
                 MessageBox.Show("Wybierz płeć!");
                 return;
             }
 
+            // Obliczanie i zaokrąglanie wskaźnika BMI
             double bmi = weight / Math.Pow(height / 100.0, 2);
             bmi = Math.Round(bmi, 2);
             wynikBMI.Text = bmi.ToString();
@@ -48,6 +54,7 @@ namespace BMI_Calculator
             string kategoria = "";
             string opis = "";
 
+            // Ustalenie kategorii oraz opisu.
             if (bmi < 14)
             {
                 kategoria = "Szczurek";
@@ -112,14 +119,18 @@ namespace BMI_Calculator
                        "Małe kroki w diecie i ruchu mogą dać duże efekty. Nie poddawaj się, Twoje zdrowie jest najważniejsze.";
             }
 
+            // Dodanie informacji o płci
             if (men.Checked)
                 kategoria += " (mężczyzna)";
             else
                 kategoria += " (kobieta)";
 
+            // Wyświetlenie wyników
             wynikKategoria.Text = kategoria;
             opisKategorii.Text = opis;
         }
+
+        // Resetowanie wszystkich danych
         private void clear_Click(object sender, EventArgs e)
         {
             wpiszwiek.Clear();
